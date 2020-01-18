@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Counter Strike: Global Offensive</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A fan made website for the game Counter Strike: Global Offensive">
+    <meta name="keywords" content="CS:GO Counter Strike Global Offensive">
+    <meta name="author" content="Daniel Hauser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet-kontaktformular.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-white" href="../index.html" id="home-btn"><i class="fas fa-home"></i></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://blog.counter-strike.net">Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            eSports
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="turniere.html">Turniere</a>
+            <a class="dropdown-item" href="rangliste.html">Team Rangliste</a>
+            <a class="dropdown-item" href="spieler.html">Top Spieler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lernen.html">Lernen</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success my-sm-0" onclick="document.getElementById('id01').style.display='block'">Login</button>
+    </div>
+  </nav>
+
+  <div id="id01" class="modal text-center">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="container">
+        <div id="login_fields">
+          <label for="uname"><b>Username</b></label>
+          <input class="form-control" type="text" placeholder="Username eingeben" id="uname" name="uname" required><br>
+
+          <label for="psw"><b>Passwort</b></label>
+          <input class="form-control" type="password" placeholder="Passwort eingeben" id="psw" name="psw" required><br>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Login</button><br>
+        <label for="remember">
+          <input type="checkbox" id="remember" name="remember"> Anmeldung merken
+        </label>
+      </div>
+
+      <div class="container modal-bottom">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <main class="vertical_align_container">
+    <div id="kcontent" class="vertical_horizontal_align jumbotron rounded">
+      <h2 class="text-center">Kontakformular</h2><br>
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" class="form-control" type="email" name="email" placeholder="Email eingeben" required><br>
+        </div>
+        <div class="form-group">
+          <label for="tel">Telefon(optional):</label>
+          <input id="tel" class="form-control" type="tel" name="tel" placeholder="Telefonnummer eingeben"><br>
+        </div>
+        <div class="form-group">
+          <label for="betreff">Betreff:</label>
+          <input id="betreff" class="form-control" type="text" name="betreff" placeholder="Betreff eingeben" required><br>
+        </div>
+        <div class="form-group">
+          <label for="nachricht">Nachricht:</label>
+          <textarea id="nachricht" class="form-control" rows="2" name="nachricht"></textarea><br>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="jumbotron jumbotron-custom bg-dark text-white rounded-0">
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h2>Kontaktdaten</h2>
+        <a href="impressum.html">Impressum</a><br>
+        <a href="kontaktformular.html">Kontaktformular</a><br><br><br>
+      </div>
+
+      <p class="footer-seperator"></p>
+
+      <div class="col-md-6">
+        <h2 class="text-center">Social Media</h2>
+        <div id="footer-social">
+          <a href="https://www.twitter.com/csgo" target="_blank"><i class="fab fa-twitter-square"></i> twitter.com/csgo</a><br>
+          <a href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive" target="_blank"><i class="fab fa-twitch"></i> twitch.tv/directory/game/Counter_Strike:Global_Offensive</a><br>
+          <a href="https://www.reddit.com/r/GlobalOffensive/" target="_blank"><i class="fab fa-reddit-square"></i> reddit.com/r/GlobalOffensive</a><br>
+          <a href="https://www.instagram.com/csgo_dev/" target="_blank"><i class="fab fa-instagram"></i> instagram.com/csgo_dev</a><br>
+          <a href="https://www.facebook.com/CounterStrike" target="_blank"><i class="fab fa-facebook-square"></i> facebook.com/CounterStrike</a><br><br>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p id="spengergasse-footer" class="text-center">&copy;Spengergasse</p>
+  </footer>
+</body>

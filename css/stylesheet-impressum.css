@@ -1,0 +1,35 @@
+html, body {
+  height: 100%;
+}
+
+main {
+  height: 70%;
+}
+
+#icontent {
+  background-color: white;
+  padding: 5%;
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+@media only screen and (max-height: 600px) {
+  main {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

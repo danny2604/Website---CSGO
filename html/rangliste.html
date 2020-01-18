@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Counter Strike: Global Offensive</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A fan made website for the game Counter Strike: Global Offensive">
+    <meta name="keywords" content="CS:GO Counter Strike Global Offensive">
+    <meta name="author" content="Daniel Hauser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet-rangliste.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-white" href="../index.html" id="home-btn"><i class="fas fa-home"></i></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://blog.counter-strike.net">Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            eSports
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="turniere.html">Turniere</a>
+            <a class="dropdown-item" href="rangliste.html">Team Rangliste</a>
+            <a class="dropdown-item" href="spieler.html">Top Spieler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lernen.html">Lernen</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success my-sm-0" onclick="document.getElementById('id01').style.display='block'">Login</button>
+    </div>
+  </nav>
+
+  <div id="id01" class="modal text-center">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="container">
+        <div id="login_fields">
+          <label for="uname"><b>Username</b></label>
+          <input class="form-control" type="text" placeholder="Username eingeben" id="uname" name="uname" required><br>
+
+          <label for="psw"><b>Passwort</b></label>
+          <input class="form-control" type="password" placeholder="Passwort eingeben" id="psw" name="psw" required><br>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Login</button><br>
+        <label for="remember">
+          <input type="checkbox" id="remember" name="remember"> Anmeldung merken
+        </label>
+      </div>
+
+      <div class="container modal-bottom">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <div id="content" class="rounded">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Logo</th>
+            <th scope="col">Teamname</th>
+            <th scope="col">Punkte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><div class="thumbnail img-responsive"><img alt="Astralis" src="https://static.hltv.org/images/team/logo/6665" class="" title="Astralis"></div></td>
+            <td><a href="spieler.html#astralis">Astralis</a></td>
+            <td>985 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><div class="thumbnail img-responsive"><img alt="mousesports" src="https://static.hltv.org/images/team/logo/4494" class="" title="mousesports"></div></td>
+            <td><a href="spieler.html#mousesports">mousesports</a></td>
+            <td>732 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><div class="thumbnail img-responsive"><img alt="Liquid" src="https://static.hltv.org/images/team/logo/5973" class="" title="Liquid"></div></td>
+            <td><a href="spieler.html#liquid">Liquid</a></td>
+            <td>614 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td><div class="thumbnail img-responsive"><img alt="fnatic" src="https://static.hltv.org/images/team/logo/4991" class="" title="fnatic"></div></td>
+            <td><a href="spieler.html#fnatic">fnatic</a></td>
+            <td>554 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td><div class="thumbnail img-responsive"><img alt="Evil Geniuses" src="https://static.hltv.org/images/team/logo/10399" class="" title="Evil Geniuses"></div></td>
+            <td><a href="spieler.html#eg">Evil Geniuses</a></td>
+            <td>525 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td><div class="thumbnail img-responsive"><img alt="Vitality" src="https://static.hltv.org/images/team/logo/9565" class="" title="Vitality"></div></td>
+            <td><a href="spieler.html#vitality">Vitality</a></td>
+            <td>421 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td><div class="thumbnail img-responsive"><img alt="100 Thieves" src="https://static.hltv.org/images/team/logo/8474" class="" title="100 Thieves"></div></td>
+            <td><a href="spieler.html#thieves">100Thieves</a></td>
+            <td>326 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td><div class="thumbnail img-responsive"><img alt="FaZe" src="https://static.hltv.org/images/team/logo/6667" class="" title="FaZe"></div></td>
+            <td><a href="spieler.html#faze">FaZe</a></td>
+            <td>303 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td><div class="thumbnail img-responsive"><img alt="Natus Vincere" src="https://static.hltv.org/images/team/logo/4608" class="" title="Natus Vincere"></div></td>
+            <td><a href="spieler.html#navi">Natus Vincere</a></td>
+            <td>289 Punkte</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td><div class="thumbnail img-responsive"><img alt="NiP" src="https://static.hltv.org/images/team/logo/4411" class="" title="NiP"></div></td>
+            <td><a href="spieler.html#nip">NiP</a></td>
+            <td>267 Punkte</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Informationen von <a target="_blank" href="https://www.hltv.org/ranking/teams/2020/january/6">HLTV.org</a><br>Zuletzt aktualisiert: 06.01.2020</p>
+    </div>
+  </main>
+
+  <footer class="jumbotron jumbotron-custom bg-dark text-white rounded-0">
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h2>Kontaktdaten</h2>
+        <a href="impressum.html">Impressum</a><br>
+        <a href="kontaktformular.html">Kontaktformular</a><br><br><br>
+      </div>
+
+      <p class="footer-seperator"></p>
+
+      <div class="col-md-6">
+        <h2 class="text-center">Social Media</h2>
+        <div id="footer-social">
+          <a href="https://www.twitter.com/csgo" target="_blank"><i class="fab fa-twitter-square"></i> twitter.com/csgo</a><br>
+          <a href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive" target="_blank"><i class="fab fa-twitch"></i> twitch.tv/directory/game/Counter_Strike:Global_Offensive</a><br>
+          <a href="https://www.reddit.com/r/GlobalOffensive/" target="_blank"><i class="fab fa-reddit-square"></i> reddit.com/r/GlobalOffensive</a><br>
+          <a href="https://www.instagram.com/csgo_dev/" target="_blank"><i class="fab fa-instagram"></i> instagram.com/csgo_dev</a><br>
+          <a href="https://www.facebook.com/CounterStrike" target="_blank"><i class="fab fa-facebook-square"></i> facebook.com/CounterStrike</a><br><br>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p id="spengergasse-footer" class="text-center">&copy;Spengergasse</p>
+  </footer>
+</body>

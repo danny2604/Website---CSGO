@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "cs_font";
+    src: url("../fonts/cs_regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../pics/homepage/background-img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
+  overflow: visible;
+  font-size: 20px;
+}
+
+nav li {
+  margin-right: 2%;
+}
+
+nav button {
+  background-color: Transparent;
+  color: rgba(255,255,255,.5);
+
+  border: 0;
+  border-radius: 0;
+}
+
+#login {
+  margin-right: 5%;
+}
+
+nav button:hover {
+  color: rgba(255,255,255,.75)
+}
+
+#content {
+  width: 90%;
+  margin: 5% auto;
+  padding: 0%;
+  background-image: linear-gradient(to bottom, rgb(15, 15, 15), rgb(25, 25, 25));
+}
+
+#home-btn {
+  margin-left: 1%;
+  margin-right: 4%;
+}
+
+#spengergasse-footer {
+  font-size: 1.25vw;
+}
+
+footer {
+  font-size: 1vw;
+
+  width: 100%;
+  position: absolute;
+}
+
+footer h2 {
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.footer-seperator {
+  line-height: 0;
+}
+
+#footer-social {
+  display: inline-block;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 650px) {
+  footer {
+    font-size: 3.9vw;
+  }
+
+  .footer-seperator {
+    line-height: 4;
+  }
+
+  footer h2 {
+    font-size: 4.35vw;
+  }
+
+  #spengergasse-footer {
+    font-size: 3.9vw;
+  }
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.horizontal_align {
+  text-align: center;
+}
+
+.vertical_align_container {
+  position: relative;
+}
+
+.vertical_align {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vertical_horizontal_align {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.v_line {
+  border-left: 2px solid rgb(36, 36, 36);
+}
+
+/* The Modal Login */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgb(24, 24, 24);
+  margin: 10% auto 10% auto;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  max-width: 300px;
+  padding-top: 2%;
+}
+
+.modal input {
+  background-color: rgb(235, 235, 235);
+  margin-bottom: 10%;
+  padding-left: 2%;
+  border-radius: 5px;
+}
+
+#login_fields {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.modal button {
+  margin-bottom: 7%;
+}
+
+.container {
+  padding: 2% 2%;
+}
+
+.modal-bottom {
+  background-color: rgb(44, 44, 44);
+  padding-top: 5%;
+}
+
+/* The Close Button */
+.close {
+ /* Position it in the top right corner outside of the modal */
+ position: absolute;
+ right: 25px;
+ top: 0;
+ color: #000;
+ font-size: 35px;
+ font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+ color: red;
+ cursor: pointer;
+}
+
+/* Add Zoom Animation*/
+.animate {
+ -webkit-animation: animatezoom 0.6s;
+ animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+ from {-webkit-transform: scale(0)}
+ to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+ from {transform: scale(0)}
+ to {transform: scale(1)}
+}

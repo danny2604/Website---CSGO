@@ -1,0 +1,95 @@
+#img-slide {
+  background-color: black;
+  text-align: center;
+}
+
+#content p, #content h1, #content h2 {
+  color: rgb(200, 200, 200);
+  font-family: "cs_font";
+}
+
+#img-carousel img {
+   width: 90%;
+   min-width: 0px;
+   max-width: 955px;
+   height: auto;
+}
+
+.carousel-indicators {
+  z-index: 3;
+}
+
+.content-row {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.content-img {
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content-img video {
+  width: 100%;
+  height: auto;
+}
+
+.content-cont {
+  position: absolute;
+  padding: 1%;
+  padding-top: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.content-cont h1 {
+  font-size: 5vw;
+  margin-top: -58%;
+}
+
+#steam_link {
+  top: 85%;
+
+  padding: 2%;
+  padding-right: 6%;
+
+  text-align: center;
+
+  background-image: linear-gradient(to bottom, rgb(87, 100, 42), rgb(62, 71, 33));
+  border: 2px solid black;
+}
+
+#steam_link p {
+  font-size: 1vw;
+  font-family:inherit;
+
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1500px) {
+  #steam_link {
+    padding: 3%;
+    padding-right: 8%;
+  }
+
+  #steam_link p {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #steam_link {
+    padding: 7%;
+    padding-right: 14%;
+  }
+
+  #steam_link p {
+    font-size: 2.5vw;
+  }
+}

@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+}
+
+main {
+  height: 90%;
+}
+
+textarea {
+  resize: none;
+}
+
+#kcontent {
+  background-color: white;
+  padding: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    height: 110%;
+  }
+
+  #kcontent {
+    width: 100%;
+    padding-top: 7%;
+    padding-bottom: 9%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  main {
+    height: 120%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+
+@media only screen and (max-height: 520px) {
+  main {
+    height: 150%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+}
+
+@media only screen and (max-height: 430px) {
+  main {
+    height: 200%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+}

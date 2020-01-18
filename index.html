@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Counter Strike: Global Offensive</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A fan made website for the game Counter Strike: Global Offensive">
+    <meta name="keywords" content="CS:GO Counter Strike Global Offensive">
+    <meta name="author" content="Daniel Hauser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet-homepage.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-white" href="index.html" id="home-btn"><i class="fas fa-home"></i></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://blog.counter-strike.net">Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            eSports
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="html/turniere.html">Turniere</a>
+            <a class="dropdown-item" href="html/rangliste.html">Team Rangliste</a>
+            <a class="dropdown-item" href="html/spieler.html">Top Spieler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="html/lernen.html">Lernen</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success my-sm-0" onclick="document.getElementById('id01').style.display='block'">Login</button>
+    </div>
+  </nav>
+
+  <div id="id01" class="modal text-center">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="container">
+        <div id="login_fields">
+          <label for="uname"><b>Username</b></label>
+          <input class="form-control" type="text" placeholder="Username eingeben" id="uname" name="uname" required><br>
+
+          <label for="psw"><b>Passwort</b></label>
+          <input class="form-control" type="password" placeholder="Passwort eingeben" id="psw" name="psw" required><br>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Login</button><br>
+        <label for="remember">
+          <input type="checkbox" id="remember" name="remember"> Anmeldung merken
+        </label>
+      </div>
+
+      <div class="container modal-bottom">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <!-- Carousel -->
+    <div id="img-slide" class="container-fluid">
+      <div id="img-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#img-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#img-carousel" data-slide-to="1"></li>
+          <li data-target="#img-carousel" data-slide-to="2"></li>
+          <li data-target="#img-carousel" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="pics/homepage/carousel-1.jpg" alt="Logo" class="img-fluid">
+          </div>
+          <div class="carousel-item">
+            <img src="pics/homepage/carousel-2.jpg" alt="Picture-Logo" class="img-fluid">
+          </div>
+          <div class="carousel-item">
+            <img src="pics/homepage/carousel-3.jpg" alt="Picture-Logo" class="img-fluid">
+          </div>
+          <div class="carousel-item">
+            <img src="pics/homepage/carousel-4.jpg" alt="Picture-Logo" class="img-fluid">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#img-carousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#img-carousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content" class="jumbotron rounded">
+      <div class="content-row vertical_align_container">
+        <div class="content-img">
+          <video width="320" height="240" autoplay loop>
+            <source src="vids/Trailer.mp4" type="video/mp4">
+            Your browser does not support this video.
+          </video>
+        </div>
+        <div class="content-cont">
+          <h1>Counter Strike: Global Offensive</h1>
+        </div>
+        <a id="steam_link" class="vertical_horizontal_align vertical_align_container jumbotron rounded" href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/" target="_blank">
+          <p class="vertical_horizontal_align">Kostenlos spielen!</p>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="jumbotron jumbotron-custom bg-dark text-white rounded-0">
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h2>Kontaktdaten</h2>
+        <a href="html/impressum.html">Impressum</a><br>
+        <a href="html/kontaktformular.html">Kontaktformular</a><br><br><br>
+      </div>
+
+      <p class="footer-seperator"></p>
+
+      <div class="col-md-6">
+        <h2 class="text-center">Social Media</h2>
+        <div id="footer-social">
+          <a href="https://www.twitter.com/csgo" target="_blank"><i class="fab fa-twitter-square"></i> twitter.com/csgo</a><br>
+          <a href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive" target="_blank"><i class="fab fa-twitch"></i> twitch.tv/directory/game/Counter_Strike:Global_Offensive</a><br>
+          <a href="https://www.reddit.com/r/GlobalOffensive/" target="_blank"><i class="fab fa-reddit-square"></i> reddit.com/r/GlobalOffensive</a><br>
+          <a href="https://www.instagram.com/csgo_dev/" target="_blank"><i class="fab fa-instagram"></i> instagram.com/csgo_dev</a><br>
+          <a href="https://www.facebook.com/CounterStrike" target="_blank"><i class="fab fa-facebook-square"></i> facebook.com/CounterStrike</a><br><br>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p id="spengergasse-footer" class="text-center">&copy;Spengergasse</p>
+  </footer>
+</body>
+
+</html>

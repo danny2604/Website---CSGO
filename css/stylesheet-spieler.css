@@ -1,0 +1,71 @@
+#content {
+  width: 75%;
+}
+
+#content h2 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#content a, h2, .card, p {
+  color: rgb(200, 200, 200);
+}
+
+#content a:hover {
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+}
+
+#content p {
+  padding-left: 1%;
+  padding-bottom: 2%;
+}
+
+#overview {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#overview a {
+  font-size: 1.3vw;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  #content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #overview a {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #overview a {
+    font-size: 5vw;
+  }
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card {
+  height: 100%;
+  background-color: rgb(29, 25, 25);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-deck {
+  margin-left: 2%;
+  margin-right: 2%;
+}

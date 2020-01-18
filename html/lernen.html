@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Counter Strike: Global Offensive</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A fan made website for the game Counter Strike: Global Offensive">
+    <meta name="keywords" content="CS:GO Counter Strike Global Offensive">
+    <meta name="author" content="Daniel Hauser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet-lernen.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-white" href="../index.html" id="home-btn"><i class="fas fa-home"></i></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://blog.counter-strike.net">Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            eSports
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="turniere.html">Turniere</a>
+            <a class="dropdown-item" href="rangliste.html">Team Rangliste</a>
+            <a class="dropdown-item" href="spieler.html">Top Spieler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lernen.html">Lernen</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success my-sm-0" onclick="document.getElementById('id01').style.display='block'">Login</button>
+    </div>
+  </nav>
+
+  <div id="id01" class="modal text-center">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="container">
+        <div id="login_fields">
+          <label for="uname"><b>Username</b></label>
+          <input class="form-control" type="text" placeholder="Username eingeben" id="uname" name="uname" required><br>
+
+          <label for="psw"><b>Passwort</b></label>
+          <input class="form-control" type="password" placeholder="Passwort eingeben" id="psw" name="psw" required><br>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Login</button><br>
+        <label for="remember">
+          <input type="checkbox" id="remember" name="remember"> Anmeldung merken
+        </label>
+      </div>
+
+      <div class="container modal-bottom">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <div id="content">
+      <h1 class="text-center">Counter Strike: Global Offensive</h1><br>
+      <div id="overview" class="text-center rounded bg-dark">
+        <h2 class="text-center">Übersicht</h2><br>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#basics">Basics</a><br>
+            <a href="#teamplay">Teamspiel</a><br>
+          </div>
+          <div class="col-md-6">
+            <a href="#grenades">Granaten</a><br>
+            <a href="#economy">Economy</a><br>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div id="basics" class="paragraph">
+        <h2>Basics</h2>
+        <p>In dem Spiel spielen 2 Teams, aus jeweils 5 Spielern, gegen einander. Ein Team spielt als die Antiterror-Einheit(AT) und das andere als die Terroristen(T).
+          Das Ziel der Terroristen ist es eine Bombe auf einer von 2 Stellen auf der <a href="#maps">Map</a> zu platzieren.
+          Die Antiterror-Einheit gewinnt indem sie verhindern das diese Bombe platziert wird oder indem sie die Bombe entschärfen.
+          Beide Teams gewinnen auch indem sie alle Gegner töten.</p><br>
+        <h3 id="rounds">Runden</h3>
+        <p>Ein Match hat 30 Runden, dass Team das zuerst 16 Runden gewonnen hat hat auch das Match gewonnen.
+          Ein Team kann eine Runde gewinnen indem sie ihr Ziel erfüllt.
+          Nachdem eine Runde beendet wurde wird die Map zurückgesetzt, alle toten Spieler wiederbelebt und zurück zu ihrer Startposition gesetzt.
+          Eine Runde dauert maximal 1 Minute und 55 Sekunden. Bei einem Rundenstart können neue Waffen gekauft werden.
+          Nach 15 Runden wechseln beide Teams die Seite und die ATs werden zu den Ts und umgekehrt.</p>
+        <div class="thumbnail img-fluid">
+          <img src="../pics/lernen/Dust2Map.png" alt="Dust2 Map">
+          <p class="text-center">Das Layout der Map Dust2</p>
+        </div><br>
+        <h3 id="maps">Maps</h3>
+        <p>Matches werden auf verschiedenen Maps gespielt. Jede Map spielt an einem anderen Ort und hat ein anderes Layout.
+         Jede Map hat zwei Bombenstellen auf denen die Ts die Bombe legen müssen. Eigene Maps können auch im Hammer Editor erstellt werden.</p><br>
+      </div><br>
+      <div id="teamplay" class="paragraph">
+        <h2>Teamspiel</h2>
+        <p>Um seine Gewinnchancen zu maximieren ist es sehr wichtig im Team zu spielen.
+          Das Spiel stellt einen Voice Chat zur Verfügung mit dem man mit Teamkameraden kommunizieren kann.
+        Dort kann man Strategien diskutieren und vorallem die Position von Gegnern teilen.</p><br>
+        <h3 id="roles">Rollen</h3>
+        <p>Während man im Spiel keine Rollen auswählen kann machen sich gute Teams untereinander Rollen aus.
+          Die grundlegenden Rollen sind diese: <a href="#igl">Ingame Leader</a>, <a href="#awper">AWPer</a>, <a href="#support">Support</a>, <a href="#ef">Entry Fragger</a> und <a href="#sp">Star player</a>.</p><br>
+        <h3 id="igl">Ingame Leader</h3>
+        <p>Der Ingame Leader(IGL) ist der Captain des Teams und sagt die Strategien an. Meistens gibt es auch einen zweiten IGL, der Einwürfe für Strategien bringt.
+          Manchmal gibt es auch zwei verschiedene IGLs für die T Seite und AT Seite.</p><br>
+          <h3 id="awper">AWPer</h3>
+          <p>Der AWPer ist der Spieler der die AWP spielt, die stärkste Waffe im Spiel. Da die AWP einen sehr hohen Preis hat macht es Sinn immer nur eine zu haben, um seine <a href="#economy">Economy</a> nicht zu belasten.
+            Außerdem ist die Waffe schwerer zu spielen als andere, weswegen sich Spieler darauf spezifieren müssen. Oft gibt es auch einen Second AWPer der auch die AWP spielt wenn es genug Geld dafür gibt.</p><br>
+        <h3 id="support">Support</h3>
+        <p> Der Support Spieler hat die Aufgaben <a href="#grenades">Granaten</a> für den <a href="#ef">Entry Fragger</a> zu werfen und falls dieser stirbt ihn zu rächen.</p><br>
+      <h3 id="ef">Entry Fragger</h3>
+      <p>Die Aufgabe des Entry Fraggers ist es als erstes ins Gefecht zu gehen und hoffentlich jemand anderen zu töten bevor er selber stirbt.
+        Sollte er sterben ist es die Aufgabe des <a href="#support">Support Spielers</a>, der knapp hinter ihm sein sollte, zu rächen.</p><br>
+      <h3 id="sp">Star Player</h3>
+      <p>Der Star Spieler ist der der sich darauf fokusiert am meisten Gegner zu töten. Oft gibt es mehrere Star Spieler.</p><br>
+      </div><br>
+      <div id="grenades" class="paragraph">
+        <h2>Granaten</h2>
+        <p>Es gibt Granaten mit welchen man Gegner Schaden hinzufügen kann, blenden kann oder Sichtlinien blockieren kann.
+          Es gibt folgende Granaten: <a href="#fb">Flashbangs</a>, <a href="#he">HE Granaten</a>, <a href="#molotovs">Molotovs</a> und <a href="#smokes">Rauchgranaten</a>.</p><br>
+        <h3 id="fb">Flashbangs</h3>
+        <p>Mit Flashbangs kann man Gegner blenden. Ein Gegner wird dann geblendet, wenn er diese Flashbang auf seinem Bilschirm hat.
+          Dass heißt man kann einer Flashbang ausweichen indem man kurz wegschaut sobald man eine sieht.</p><br>
+        <h3 id="he">HE Granaten</h3>
+        <p>HE Granaten explodieren nach einer bestimmten Zeit und fügen Spielern in der Umgebung Schaden zu.</p><br>
+        <h3 id="molotovs">Molotovs</h3>
+        <p>Molotovs explodieren sobald sie den Boden berühren und setzen diesen dann in Feuer.
+          Molotovs können verwendet werden um enge Gänge zu blockieren.</p><br>
+        <h3 id="smokes">Rauchgranaten</h3>
+        <p>Rauchgranaten sind eine der wichtigsten Granaten. Mit ihnen kann man Sichtlinien blockieren, damit man nicht sovielen Gegnern auf einmal ausgesetzt ist.</p><br>
+        <h3 id="nspots">Granaten Line-Ups</h3>
+        <p>Oft gibt es bestimmte Line-Ups um Granaten in die perfekte Position zu bekommen, ohne selbst von Gegnern gesehen zu werden.</p>
+        <div class="thumbnail-vid">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wDM-4yppl2w" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="text-center">Line-Ups auf der Map Dust2</p>
+        </div><br>
+      </div>
+      <div id="economy" class="paragraph">
+        <h2>Economy</h2>
+        <p>Geld bekommt man nach dem vollenden einer Runde, nachdem man einen Spieler getötet hat und noch mehr. Diese Geld kann man dann benutzen um am <a href="#rounds">Rundenstart</a> gute Waffen kaufen zu können.</p><br>
+        <h3 id="drops">Drops</h3>
+        <p>Manchmal macht es Sinn einem Teamkameraden eine gute Waffe zu kaufen, falls dieser selbst nicht genug Geld hat. Dies nennt man einen "Drop".
+          Dadurch gibt es mehr Spieler mit guten Waffen und kann der Unterschied zwischen einer verlorenen <a href="#rounds">Runde</a> und einer gewonnenen sein.</p><br>
+        <h3 id="ecos">Ecos</h3>
+        <p>Falls dein Team nicht genug Geld hat um die gebrauchten Waffen zu kaufen macht es Sinn eine <a href="#rounds">Runde</a> nichts zu kaufen, um dafür nächste Runde genug Geld zu haben.</p>
+        <h3 id="saves">Saves</h3>
+        <p>Vielleicht bist du mal in einer Situation in der du als letzter lebst und noch mehrere Gegner hast.
+          Viele Spieler versuchen in dieser Situation noch die Runde zu gewinnen, schaffen dies aber nicht und verlieren ihre Waffe.
+          Es wäre aber um einiges schlauer einfach auf das Ende der <a href="#rounds">Runde</a> zu warten, dadurch muss man kein Geld für eine neue Waffe in der nächsten <a href="#rounds">Runde</a> ausgeben.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="jumbotron jumbotron-custom bg-dark text-white rounded-0">
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h2>Kontaktdaten</h2>
+        <a href="impressum.html">Impressum</a><br>
+        <a href="kontaktformular.html">Kontaktformular</a><br><br><br>
+      </div>
+
+      <p class="footer-seperator"></p>
+
+      <div class="col-md-6">
+        <h2 class="text-center">Social Media</h2>
+        <div id="footer-social">
+          <a href="https://www.twitter.com/csgo" target="_blank"><i class="fab fa-twitter-square"></i> twitter.com/csgo</a><br>
+          <a href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive" target="_blank"><i class="fab fa-twitch"></i> twitch.tv/directory/game/Counter_Strike:Global_Offensive</a><br>
+          <a href="https://www.reddit.com/r/GlobalOffensive/" target="_blank"><i class="fab fa-reddit-square"></i> reddit.com/r/GlobalOffensive</a><br>
+          <a href="https://www.instagram.com/csgo_dev/" target="_blank"><i class="fab fa-instagram"></i> instagram.com/csgo_dev</a><br>
+          <a href="https://www.facebook.com/CounterStrike" target="_blank"><i class="fab fa-facebook-square"></i> facebook.com/CounterStrike</a><br><br>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p id="spengergasse-footer" class="text-center">&copy;Spengergasse</p>
+  </footer>
+</body>
+</html>

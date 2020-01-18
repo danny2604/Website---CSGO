@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Counter Strike: Global Offensive</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A fan made website for the game Counter Strike: Global Offensive">
+    <meta name="keywords" content="CS:GO Counter Strike Global Offensive">
+    <meta name="author" content="Daniel Hauser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet-spieler.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand text-white" href="../index.html" id="home-btn"><i class="fas fa-home"></i></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://blog.counter-strike.net">Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            eSports
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="turniere.html">Turniere</a>
+            <a class="dropdown-item" href="rangliste.html">Team Rangliste</a>
+            <a class="dropdown-item" href="spieler.html">Top Spieler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lernen.html">Lernen</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-success my-sm-0" onclick="document.getElementById('id01').style.display='block'">Login</button>
+    </div>
+  </nav>
+
+  <div id="id01" class="modal text-center">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="container">
+        <div id="login_fields">
+          <label for="uname"><b>Username</b></label>
+          <input class="form-control" type="text" placeholder="Username eingeben" id="uname" name="uname" required><br>
+
+          <label for="psw"><b>Passwort</b></label>
+          <input class="form-control" type="password" placeholder="Passwort eingeben" id="psw" name="psw" required><br>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Login</button><br>
+        <label for="remember">
+          <input type="checkbox" id="remember" name="remember"> Anmeldung merken
+        </label>
+      </div>
+
+      <div class="container modal-bottom">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+    <div id="content" class="rounded">
+      <div id="overview" class="text-center bg-dark">
+        <a href="#astralis">Astralis</a>
+        <a href="#mousesports">mousesports</a>
+        <a href="#liquid">liquid</a>
+        <a href="#astralis">fnatic</a>
+        <a href="#eg">EvilGeniuses</a>
+        <a href="#vitality">Vitality</a>
+        <a href="#thieves">100Thieves</a>
+        <a href="#faze">FaZe</a>
+        <a href="#navi">NatusVincere</a>
+        <a href="#nip">NiP</a>
+      </div>
+      <h2 class="text-center" id="astralis">Astralis</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Andreas 'Xyp9x' Højsleth" src="https://static.hltv.org/images/playerprofile/thumb/4954/400.jpeg?v=9" title="Andreas 'Xyp9x' Højsleth">
+          <div class="card-body">
+            <h5 class="card-title text-center">Xyp9x</h5>
+            <p class="card-text">Rating 1.04</p>
+            <p class="card-text">DPR 0.61</p>
+            <p class="card-text">Impact 1.01</p>
+            <p class="card-text">ADR 76.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Peter 'dupreeh' Rasmussen" src="https://static.hltv.org/images/playerprofile/thumb/7398/400.jpeg?v=9" title="Peter 'dupreeh' Rasmussen">
+          <div class="card-body">
+            <h5 class="card-title text-center">dupreeh</h5>
+            <p class="card-text">Rating 1.09</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.17</p>
+            <p class="card-text">ADR 78.7</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Lukas 'gla1ve' Rossander" src="https://static.hltv.org/images/playerprofile/thumb/7412/400.jpeg?v=11" title="Lukas 'gla1ve' Rossander">
+          <div class="card-body">
+            <h5 class="card-title text-center">gla1ve</h5>
+            <p class="card-text">Rating 1.01</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.08</p>
+            <p class="card-text">ADR 76.8</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Emil 'Magisk' Reif" src="https://static.hltv.org/images/playerprofile/thumb/9032/400.jpeg?v=15" title="Emil 'Magisk' Reif">
+          <div class="card-body">
+            <h5 class="card-title text-center">Magisk</h5>
+            <p class="card-text">Rating 1.11</p>
+            <p class="card-text">DPR 0.63</p>
+            <p class="card-text">Impact 1.14</p>
+            <p class="card-text">ADR 81.3</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Nicolai 'device' Reedtz" src="https://static.hltv.org/images/playerprofile/thumb/7592/400.jpeg?v=11" title="Nicolai 'device' Reedtz">
+          <div class="card-body">
+            <h5 class="card-title text-center">device</h5>
+            <p class="card-text">Rating 1.17</p>
+            <p class="card-text">DPR 0.62</p>
+            <p class="card-text">Impact 1.29</p>
+            <p class="card-text">ADR 81.0</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="mousesports">mousesports</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Finn 'karrigan' Andersen" src="https://static.hltv.org/images/playerprofile/thumb/429/400.jpeg?v=11" title="Finn 'karrigan' Andersen">
+          <div class="card-body">
+            <h5 class="card-title text-center">karrigan</h5>
+            <p class="card-text">Rating 0.93</p>
+            <p class="card-text">DPR 0.68</p>
+            <p class="card-text">Impact 0.90</p>
+            <p class="card-text">ADR 68.7</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Chris 'chrisJ' de Jong" src="https://static.hltv.org/images/playerprofile/thumb/2730/400.jpeg?v=12" title="Chris 'chrisJ' de Jong">
+          <div class="card-body">
+            <h5 class="card-title text-center">chrisJ</h5>
+            <p class="card-text">Rating 1.04</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.06</p>
+            <p class="card-text">ADR 71.5</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Özgür 'woxic' Eker" src="https://static.hltv.org/images/playerprofile/thumb/8574/400.jpeg?v=11" title="Özgür 'woxic' Eker">
+          <div class="card-body">
+            <h5 class="card-title text-center">woxic</h5>
+            <p class="card-text">Rating 1.15</p>
+            <p class="card-text">DPR 0.62</p>
+            <p class="card-text">Impact 1.23</p>
+            <p class="card-text">ADR 78.4</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="David 'frozen' Čerňanský" src="https://static.hltv.org/images/playerprofile/thumb/9960/400.jpeg?v=18" title="David 'frozen' Čerňanský">
+          <div class="card-body">
+            <h5 class="card-title text-center">frozen</h5>
+            <p class="card-text">Rating 1.15</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.25</p>
+            <p class="card-text">ADR 85.1</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Robin 'ropz' Kool" src="https://static.hltv.org/images/playerprofile/thumb/11816/400.jpeg?v=11" title="Robin 'ropz' Kool">
+          <div class="card-body">
+            <h5 class="card-title text-center">ropz</h5>
+            <p class="card-text">Rating 1.13</p>
+            <p class="card-text">DPR 0.61</p>
+            <p class="card-text">Impact 1.07</p>
+            <p class="card-text">ADR 78.2</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="liquid">Liquid</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Nick 'nitr0' Cannella" src="https://static.hltv.org/images/playerprofile/thumb/7687/400.jpeg?v=9" title="Nick 'nitr0' Cannella">
+          <div class="card-body">
+            <h5 class="card-title text-center">nitr0</h5>
+            <p class="card-text">Rating 1.02</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.04</p>
+            <p class="card-text">ADR 72.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Keith 'NAF' Markovic" src="https://static.hltv.org/images/playerprofile/thumb/8520/400.jpeg?v=8" title="Keith 'NAF' Markovic">
+          <div class="card-body">
+            <h5 class="card-title text-center">NAF</h5>
+            <p class="card-text">Rating 1.09</p>
+            <p class="card-text">DPR 0.64</p>
+            <p class="card-text">Impact 1.12</p>
+            <p class="card-text">ADR 82.1</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Jonathan 'EliGE' Jablonowski" src="https://static.hltv.org/images/playerprofile/thumb/8738/400.jpeg?v=7" title="Jonathan 'EliGE' Jablonowski">
+          <div class="card-body">
+            <h5 class="card-title text-center">EliGE</h5>
+            <p class="card-text">Rating 1.09</p>
+            <p class="card-text">DPR 0.68</p>
+            <p class="card-text">Impact 1.24</p>
+            <p class="card-text">ADR 83.5</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Jake 'Stewie2K' Yip" src="https://static.hltv.org/images/playerprofile/thumb/8797/400.jpeg?v=12" title="Jake 'Stewie2K' Yip">
+          <div class="card-body">
+            <h5 class="card-title text-center">Stewie2K</h5>
+            <p class="card-text">Rating 1.04</p>
+            <p class="card-text">DPR 0.68</p>
+            <p class="card-text">Impact 1.21</p>
+            <p class="card-text">ADR 80.1</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Russel 'Twistzz' Van Dulken" src="https://static.hltv.org/images/playerprofile/thumb/10394/400.jpeg?v=14" title="Russel 'Twistzz' Van Dulken">
+          <div class="card-body">
+            <h5 class="card-title text-center">Twistzz</h5>
+            <p class="card-text">Rating 1.13</p>
+            <p class="card-text">DPR 0.62</p>
+            <p class="card-text">Impact 1.10</p>
+            <p class="card-text">ADR 78.0</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="fnatic">fnatic</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Robin 'flusha' Rönnquist" src="https://static.hltv.org/images/playerprofile/thumb/3055/400.jpeg?v=8" title="Robin 'flusha' Rönnquist">
+          <div class="card-body">
+            <h5 class="card-title text-center">flusha</h5>
+            <p class="card-text">Rating 1.07</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.09</p>
+            <p class="card-text">ADR 83.2</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Jesper 'JW' Wecksell" src="https://static.hltv.org/images/playerprofile/thumb/3849/400.jpeg?v=9" title="Jesper 'JW' Wecksell">
+          <div class="card-body">
+            <h5 class="card-title text-center">JW</h5>
+            <p class="card-text">Rating 1.06</p>
+            <p class="card-text">DPR 0.68</p>
+            <p class="card-text">Impact 1.18</p>
+            <p class="card-text">ADR 77.3</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Freddy 'KRIMZ' Johansson" src="https://static.hltv.org/images/playerprofile/thumb/7528/400.jpeg?v=9" title="Freddy 'KRIMZ' Johansson">
+          <div class="card-body">
+            <h5 class="card-title">KRIMZ</h5>
+            <p class="card-text">Rating 1.06</p>
+            <p class="card-text">DPR 0.63</p>
+            <p class="card-text">Impact 1.02</p>
+            <p class="card-text">ADR 76.8</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Maikil 'Golden' Selim" src="https://static.hltv.org/images/playerprofile/thumb/11110/400.jpeg?v=7" title="Maikil 'Golden' Selim">
+          <div class="card-body">
+            <h5 class="card-title text-center">Golden</h5>
+            <p class="card-text">Rating 0.97</p>
+            <p class="card-text">DPR 0.69</p>
+            <p class="card-text">Impact 0.95</p>
+            <p class="card-text">ADR 70.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Ludvig 'Brollan' Brolin" src="https://static.hltv.org/images/playerprofile/thumb/13666/400.jpeg?v=7" title="Ludvig 'Brollan' Brolin">
+          <div class="card-body">
+            <h5 class="card-title text-center">Brollan</h5>
+            <p class="card-text">Rating 1.12</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.16</p>
+            <p class="card-text">ADR 79.1</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="eg">Evil Geniuses</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Peter 'stanislaw' Jarguz" src="https://static.hltv.org/images/playerprofile/thumb/8507/400.jpeg?v=12" title="Peter 'stanislaw' Jarguz">
+          <div class="card-body">
+            <h5 class="card-title text-center">stanislaw</h5>
+            <p class="card-text">Rating 0.98</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.00</p>
+            <p class="card-text">ADR 74.6</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Tarik 'tarik' Celik" src="https://static.hltv.org/images/playerprofile/thumb/8523/400.jpeg?v=11" title="Tarik 'tarik' Celik">
+          <div class="card-body">
+            <h5 class="card-title text-center">tarik</h5>
+            <p class="card-text">Rating 1.05</p>
+            <p class="card-text">DPR 0.68</p>
+            <p class="card-text">Impact 1.13</p>
+            <p class="card-text">ADR 77.7</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Vincent 'Brehze' Cayonte" src="https://static.hltv.org/images/playerprofile/thumb/9136/400.jpeg?v=10" title="Vincent 'Brehze' Cayonte">
+          <div class="card-body">
+            <h5 class="card-title">Brehze</h5>
+            <p class="card-text">Rating 1.12</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.18</p>
+            <p class="card-text">ADR 81.7</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Ethan 'Ethan' Arnold" src="https://static.hltv.org/images/playerprofile/thumb/10671/400.jpeg?v=10" title="Ethan 'Ethan' Arnold">
+          <div class="card-body">
+            <h5 class="card-title text-center">Ethan</h5>
+            <p class="card-text">Rating 1.15</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.19</p>
+            <p class="card-text">ADR 82.4</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Tsvetelin 'CeRq' Dimitrov" src="https://static.hltv.org/images/playerprofile/thumb/11219/400.jpeg?v=11" title="Tsvetelin 'CeRq' Dimitrov">
+          <div class="card-body">
+            <h5 class="card-title text-center">CeRq</h5>
+            <p class="card-text">Rating 1.17</p>
+            <p class="card-text">DPR 0.62</p>
+            <p class="card-text">Impact 1.21</p>
+            <p class="card-text">ADR 75.9</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="vitality">Vitality</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Richard 'shox' Papillon" src="https://static.hltv.org/images/playerprofile/thumb/1225/400.jpeg?v=11" title="Richard 'shox' Papillon">
+          <div class="card-body">
+            <h5 class="card-title text-center">shox</h5>
+            <p class="card-text">Rating 1.09</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.14</p>
+            <p class="card-text">ADR 78.0</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Cédric 'RpK' Guipouy" src="https://static.hltv.org/images/playerprofile/thumb/7169/400.jpeg?v=7" title="Cédric 'RpK' Guipouy">
+          <div class="card-body">
+            <h5 class="card-title text-center">Rpk</h5>
+            <p class="card-text">Rating 0.98</p>
+            <p class="card-text">DPR 0.68</p>
+            <p class="card-text">Impact 0.98</p>
+            <p class="card-text">ADR 72.5</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Dan 'apEX' Madesclaire" src="https://static.hltv.org/images/playerprofile/thumb/7322/400.jpeg?v=10" title="Dan 'apEX' Madesclaire">
+          <div class="card-body">
+            <h5 class="card-title text-center">apEX</h5>
+            <p class="card-text">Rating 1.04</p>
+            <p class="card-text">DPR 0.70</p>
+            <p class="card-text">Impact 1.14</p>
+            <p class="card-text">ADR 80.6</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Alex 'ALEX' McMeekin" src="https://static.hltv.org/images/playerprofile/thumb/8184/400.jpeg?v=12" title="Alex 'ALEX' McMeekin">
+          <div class="card-body">
+            <h5 class="card-title text-center">ALEX</h5>
+            <p class="card-text">Rating 1.00</p>
+            <p class="card-text">DPR 0.71</p>
+            <p class="card-text">Impact 1.10</p>
+            <p class="card-text">ADR 77.0</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Mathieu 'ZywOo' Herbaut" src="https://static.hltv.org/images/playerprofile/thumb/11893/400.jpeg?v=4" title="Mathieu 'ZywOo' Herbaut">
+          <div class="card-body">
+            <h5 class="card-title text-center">ZywOo</h5>
+            <p class="card-text">Rating 1.36</p>
+            <p class="card-text">DPR 0.62</p>
+            <p class="card-text">Impact 1.52</p>
+            <p class="card-text">ADR 91.2</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="thieves">100Thieves</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Justin 'jks' Savage" src="https://static.hltv.org/images/playerprofile/thumb/4679/400.jpeg?v=13" title="Justin 'jks' Savage">
+          <div class="card-body">
+            <h5 class="card-title text-center">jks</h5>
+            <p class="card-text">Rating 1.09</p>
+            <p class="card-text">DPR 0.63</p>
+            <p class="card-text">Impact 1.08</p>
+            <p class="card-text">ADR 78.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Aaron 'AZR' Ward" src="https://static.hltv.org/images/playerprofile/thumb/8082/400.jpeg?v=15" title="Aaron 'AZR' Ward">
+          <div class="card-body">
+            <h5 class="card-title text-center">AZR</h5>
+            <p class="card-text">Rating 1.00</p>
+            <p class="card-text">DPR 0.69</p>
+            <p class="card-text">Impact 1.03</p>
+            <p class="card-text">ADR 75.3</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Joakim 'jkaem' Myrbostad" src="https://static.hltv.org/images/playerprofile/thumb/8248/400.jpeg?v=9" title="Joakim 'jkaem' Myrbostad">
+          <div class="card-body">
+            <h5 class="card-title text-center">jkaem</h5>
+            <p class="card-text">Rating 1.03</p>
+            <p class="card-text">DPR 0.69</p>
+            <p class="card-text">Impact 1.13</p>
+            <p class="card-text">ADR 78.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Sean 'Gratisfaction' Kaiwai" src="https://static.hltv.org/images/playerprofile/thumb/9686/400.jpeg?v=14" title="Sean 'Gratisfaction' Kaiwai">
+          <div class="card-body">
+            <h5 class="card-title text-center">Gratisfaction</h5>
+            <p class="card-text">Rating 1.07</p>
+            <p class="card-text">DPR 0.61</p>
+            <p class="card-text">Impact 1.16</p>
+            <p class="card-text">ADR 74.0</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Jay 'Liazz' Tregillgas" src="https://static.hltv.org/images/playerprofile/thumb/10588/400.jpeg?v=8" title="Jay 'Liazz' Tregillgas">
+          <div class="card-body">
+            <h5 class="card-title text-center">Liazz</h5>
+            <p class="card-text">Rating 1.12</p>
+            <p class="card-text">DPR 0.61</p>
+            <p class="card-text">Impact 1.14</p>
+            <p class="card-text">ADR 81.4</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="faze">FaZe</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Olof 'olofmeister' Kajbjer" src="https://static.hltv.org/images/playerprofile/thumb/885/400.jpeg?v=8" title="Olof 'olofmeister' Kajbjer">
+          <div class="card-body">
+            <h5 class="card-title text-center">olofmeister</h5>
+            <p class="card-text">Rating 1.08</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.07</p>
+            <p class="card-text">ADR 75.6</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Nikola 'NiKo' Kovač" src="https://static.hltv.org/images/playerprofile/thumb/3741/400.jpeg?v=10" title="Nikola 'NiKo' Kovač">
+          <div class="card-body">
+            <h5 class="card-title text-center">NiKo</h5>
+            <p class="card-text">Rating 1.16</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.30</p>
+            <p class="card-text">ADR 85.5</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Håvard 'rain' Nygaard" src="https://static.hltv.org/images/playerprofile/thumb/8183/400.jpeg?v=7" title="Håvard 'rain' Nygaard">
+          <div class="card-body">
+            <h5 class="card-title text-center">rain</h5>
+            <p class="card-text">Rating 1.05</p>
+            <p class="card-text">DPR 0.69</p>
+            <p class="card-text">Impact 1.19</p>
+            <p class="card-text">ADR 81.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Marcelo 'coldzera' David" src="https://static.hltv.org/images/playerprofile/thumb/9216/400.jpeg?v=10" title="Marcelo 'coldzera' David">
+          <div class="card-body">
+            <h5 class="card-title text-center">coldzera</h5>
+            <p class="card-text">Rating 1.19</p>
+            <p class="card-text">DPR 0.61</p>
+            <p class="card-text">Impact 1.14</p>
+            <p class="card-text">ADR 81.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Helvijs 'broky' Saukants" src="https://static.hltv.org/images/playerprofile/thumb/18053/400.jpeg?v=3" title="Helvijs 'broky' Saukants">
+          <div class="card-body">
+            <h5 class="card-title text-center">Liazz</h5>
+            <p class="card-text">Rating 1.07</p>
+            <p class="card-text">DPR 0.63</p>
+            <p class="card-text">Impact 0.99</p>
+            <p class="card-text">ADR 72.8</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="navi">Natus Vincere</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Ladislav 'GuardiaN' Kovács" src="https://static.hltv.org/images/playerprofile/thumb/2757/400.jpeg?v=11" title="Ladislav 'GuardiaN' Kovács">
+          <div class="card-body">
+            <h5 class="card-title text-center">GuardiaN</h5>
+            <p class="card-text">Rating 1.12</p>
+            <p class="card-text">DPR 0.62</p>
+            <p class="card-text">Impact 1.10</p>
+            <p class="card-text">ADR 72.0</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Egor 'flamie' Vasilyev" src="https://static.hltv.org/images/playerprofile/thumb/7594/400.jpeg?v=8" title="Egor 'flamie' Vasilyev">
+          <div class="card-body">
+            <h5 class="card-title text-center">flamie</h5>
+            <p class="card-text">Rating 1.05</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.06</p>
+            <p class="card-text">ADR 78.2</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Aleksandr 's1mple' Kostyliev" src="https://static.hltv.org/images/playerprofile/thumb/7998/400.jpeg?v=22" title="Aleksandr 's1mple' Kostyliev">
+          <div class="card-body">
+            <h5 class="card-title text-center">s1mple</h5>
+            <p class="card-text">Rating 1.23</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.35</p>
+            <p class="card-text">ADR 86.6</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Denis 'electronic' Sharipov" src="https://static.hltv.org/images/playerprofile/thumb/8918/400.jpeg?v=8" title="Denis 'electronic' Sharipov">
+          <div class="card-body">
+            <h5 class="card-title text-center">electronic</h5>
+            <p class="card-text">Rating 1.11</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.21</p>
+            <p class="card-text">ADR 84.5</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Kirill 'Boombl4' Mikhailov" src="https://static.hltv.org/images/playerprofile/thumb/11840/400.jpeg?v=7" title="Kirill 'Boombl4' Mikhailov">
+          <div class="card-body">
+            <h5 class="card-title text-center">Boombl4</h5>
+            <p class="card-text">Rating 1.09</p>
+            <p class="card-text">DPR 0.69</p>
+            <p class="card-text">Impact 1.18</p>
+            <p class="card-text">ADR 80.4</p>
+          </div>
+        </div>
+      </div><br>
+
+      <h2 class="text-center" id="nip">NiP</h2>
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" alt="Patrik 'f0rest' Lindberg" src="https://static.hltv.org/images/playerprofile/thumb/29/400.jpeg?v=10" title="Patrik 'f0rest' Lindberg">
+          <div class="card-body">
+            <h5 class="card-title text-center">f0rest</h5>
+            <p class="card-text">Rating 1.12</p>
+            <p class="card-text">DPR 0.65</p>
+            <p class="card-text">Impact 1.08</p>
+            <p class="card-text">ADR 76.3</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Simon 'twist' Eliasson" src="https://static.hltv.org/images/playerprofile/thumb/7443/400.jpeg?v=10" title="Simon 'twist' Eliasson">
+          <div class="card-body">
+            <h5 class="card-title text-center">twist</h5>
+            <p class="card-text">Rating 1.07</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.16</p>
+            <p class="card-text">ADR 78.9</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Jonas 'Lekr0' Olofsson" src="https://static.hltv.org/images/playerprofile/thumb/9261/400.jpeg?v=10" title="Jonas 'Lekr0' Olofsson">
+          <div class="card-body">
+            <h5 class="card-title text-center">Lekr0</h5>
+            <p class="card-text">Rating 1.02</p>
+            <p class="card-text">DPR 0.67</p>
+            <p class="card-text">Impact 1.06</p>
+            <p class="card-text">ADR 76.3</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Fredrik 'REZ' Sterner" src="https://static.hltv.org/images/playerprofile/thumb/9278/400.jpeg?v=16" title="Fredrik 'REZ' Sterner">
+          <div class="card-body">
+            <h5 class="card-title text-center">REZ</h5>
+            <p class="card-text">Rating 1.03</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.10</p>
+            <p class="card-text">ADR 78.3</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" alt="Nicolas 'Plopski' Gonzalez Zamora" src="https://static.hltv.org/images/playerprofile/thumb/14218/400.jpeg?v=7" title="Nicolas 'Plopski' Gonzalez Zamora">
+          <div class="card-body">
+            <h5 class="card-title text-center">Plopski</h5>
+            <p class="card-text">Rating 1.12</p>
+            <p class="card-text">DPR 0.66</p>
+            <p class="card-text">Impact 1.12</p>
+            <p class="card-text">ADR 79.8</p>
+          </div>
+        </div>
+      </div><br>
+      <p>Informationen von <a target="_blank" href="https://www.hltv.org/">HLTV.org</a><br>Zuletzt aktualisiert: 13.01.2020</p>
+    </div>
+  </main>
+
+  <footer class="jumbotron jumbotron-custom bg-dark text-white rounded-0">
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <h2>Kontaktdaten</h2>
+        <a href="impressum.html">Impressum</a><br>
+        <a href="kontaktformular.html">Kontaktformular</a><br><br><br>
+      </div>
+
+      <p class="footer-seperator"></p>
+
+      <div class="col-md-6">
+        <h2 class="text-center">Social Media</h2>
+        <div id="footer-social">
+          <a href="https://www.twitter.com/csgo" target="_blank"><i class="fab fa-twitter-square"></i> twitter.com/csgo</a><br>
+          <a href="https://www.twitch.tv/directory/game/Counter-Strike%3A%20Global%20Offensive" target="_blank"><i class="fab fa-twitch"></i> twitch.tv/directory/game/Counter_Strike:Global_Offensive</a><br>
+          <a href="https://www.reddit.com/r/GlobalOffensive/" target="_blank"><i class="fab fa-reddit-square"></i> reddit.com/r/GlobalOffensive</a><br>
+          <a href="https://www.instagram.com/csgo_dev/" target="_blank"><i class="fab fa-instagram"></i> instagram.com/csgo_dev</a><br>
+          <a href="https://www.facebook.com/CounterStrike" target="_blank"><i class="fab fa-facebook-square"></i> facebook.com/CounterStrike</a><br><br>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p id="spengergasse-footer" class="text-center">&copy;Spengergasse</p>
+  </footer>
+</body>
